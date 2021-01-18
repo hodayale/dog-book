@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 
@@ -21,21 +21,6 @@ const DogCard = (props) => {
                     setdogPicture(dogRes.data.message);
         });
     }
-    
-
-    // useEffect(() => {
-    //     let mounted = true;
-    //     if(mounted) {
-    //         if(dogPicture === undefined) {
-    //             axios.get(`https://dog.ceo/api/breed/${dogBreed}/images/random`).then((dogRes) => {
-    //                         setdogPicture(dogRes.data.message);
-    //                     });
-    //         }
-    //     }
-    //     return () => mounted = false;
-    // }, [dogPicture]);
-
-    
 
     return(
         <Card style={{ width: '18rem', display: dogBreed.toLowerCase().includes(filter.toLowerCase()) ? "" : "none"}} onDoubleClick={navigateToBreed}>   

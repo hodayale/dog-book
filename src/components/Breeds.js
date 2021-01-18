@@ -11,21 +11,42 @@ const Breeds = () => {
     //const [breedsImage, setbreedsImage] = React.useState([]);
     const [filter, setFilter] = React.useState('');
 
+    
     useEffect(() => {
-        let mounted = true;
-        if(mounted) {
-             axios.get('https://dog.ceo/api/breeds/list/all').then((breedsRes)=>{
+        let cancelToken = axios.CancelToken;
+        let source = cancelToken.source();
+        // let mounted = true;
+        // if(mounted) {
+        (async () => {
+            try {
+             axios.get('https://dog.ceo/api/breeds/list/all', {cancelToken: source.token})
+             .then((breedsRes)=>{
                     setbreeds(Object.keys(breedsRes.data.message));
             });
-        }
+            }catch (error) {
+                if (axios.isCancel(error)) {
+                console.log('Request canceled', error.message);
+                } else {
+                // handle error
+                console.log(error);
+                }
+            }
+        })();
+        // }
 
-        return () => mounted = false;
+        //return () => mounted = false;
+        return () => {
+            //when the component unmounts
+            //console.log("component unmounted");
+            // cancel the request (the message parameter is optional)
+            source.cancel('Operation canceled by the user.');
+          }
     }, [breeds]);
 
     let dogCards = breeds.map((dog, index) => <DogCard key={index} filter={filter} dogBreed={dog}/>);
 
     const updateImages = () => {
-        dogCards = breeds.map((dog, index) => <DogCard key={index} filter={filter} dogBreed={dog}/>);
+        setbreeds([]);
     }
 
     return(
