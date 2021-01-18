@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+
+
 import './App.css';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import HomePage from './components/HomePage';
+import { HashRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Container className="c-app">
+        <Navbar bg="light" variant="light">
+          <Navbar.Brand href="#/">Dog Book</Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link href="#/breeds">Breeds</Nav.Link>
+            <Nav.Link href="#/about">About</Nav.Link>
+          </Nav>
+        </Navbar>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+      </Container>
+    </HashRouter>
   );
 }
 
