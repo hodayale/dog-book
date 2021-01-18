@@ -4,6 +4,7 @@ import './App.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import HomePage from './components/HomePage';
 import { HashRouter, Route } from 'react-router-dom';
+import Breeds from './components/Breeds';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </Navbar>
         <Route exact path="/">
           <HomePage />
+        </Route>
+        <Route exact path="/breeds">
+          <Breeds/>
         </Route>
       </Container>
     </HashRouter>
