@@ -5,6 +5,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import HomePage from './components/HomePage';
 import { HashRouter, Route } from 'react-router-dom';
 import Breeds from './components/Breeds';
+import BreedDetails from './components/BreedDetails';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route exact path="/breeds">
           <Breeds/>
+        </Route>
+        <Route exact path="/breeds/:breedName">
+          <BreedDetails/>
         </Route>
       </Container>
     </HashRouter>
