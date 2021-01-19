@@ -24,8 +24,8 @@ const DogCard = (props) => {
 
     return(
         <Card style={{ width: '18rem', display: dogBreed.toLowerCase().includes(filter.toLowerCase()) ? "" : "none"}} onDoubleClick={navigateToBreed}>   
-            <Card.Body>
-                <Card.Title className="text-capitalize">{dogBreed}</Card.Title>
+            <Card.Body className="bg-light">
+                <Card.Title className="text-center text-capitalize">{dogBreed}</Card.Title>
                 <Card.Img variant="top" src={dogPicture} />
             </Card.Body>
         </Card>

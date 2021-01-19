@@ -16,7 +16,7 @@ const HomePage = () => {
 
     return(
         <Jumbotron>
-            <h1>Dog Book</h1>
+            <h1 className="logo-design">Dog Book</h1>
             <p>Man's Best Friend</p>
             <p>
                 <Button onClick={navigateToBreed}>Woof!</Button>

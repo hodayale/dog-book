@@ -3,8 +3,8 @@ import React from 'react';
 
 const About = () => {
     return (
-        <Jumbotron>
-            <h1>Dog Book</h1>
+        <Jumbotron className="bg-white">
+            <h1 className="logo-design display-4">Dog Book</h1>
             <p>Man's Best Friend</p>
             <p>This site is a book of all dog breeds.</p>
             <p>Enjoy watching the pictures!</p>

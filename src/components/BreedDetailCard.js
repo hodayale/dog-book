@@ -6,7 +6,7 @@ const BreedDetailCard = (props) => {
     
     return(
         <Card style={{ width: '18rem' }}>   
-            <Card.Body>
+            <Card.Body className="bg-light">
                 <Card.Img variant="top" src={dogPicture} />
             </Card.Body>
         </Card>
