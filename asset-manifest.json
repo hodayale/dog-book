@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dog-book/static/css/main.f787fcb0.chunk.css",
+    "main.js": "/dog-book/static/js/main.ad1f5acf.chunk.js",
+    "main.js.map": "/dog-book/static/js/main.ad1f5acf.chunk.js.map",
+    "runtime-main.js": "/dog-book/static/js/runtime-main.77cf664c.js",
+    "runtime-main.js.map": "/dog-book/static/js/runtime-main.77cf664c.js.map",
+    "static/css/2.ae9f1eb3.chunk.css": "/dog-book/static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.d5b07987.chunk.js": "/dog-book/static/js/2.d5b07987.chunk.js",
+    "static/js/2.d5b07987.chunk.js.map": "/dog-book/static/js/2.d5b07987.chunk.js.map",
+    "static/js/3.a4dab21c.chunk.js": "/dog-book/static/js/3.a4dab21c.chunk.js",
+    "static/js/3.a4dab21c.chunk.js.map": "/dog-book/static/js/3.a4dab21c.chunk.js.map",
+    "index.html": "/dog-book/index.html",
+    "static/css/2.ae9f1eb3.chunk.css.map": "/dog-book/static/css/2.ae9f1eb3.chunk.css.map",
+    "static/css/main.f787fcb0.chunk.css.map": "/dog-book/static/css/main.f787fcb0.chunk.css.map",
+    "static/js/2.d5b07987.chunk.js.LICENSE.txt": "/dog-book/static/js/2.d5b07987.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.77cf664c.js",
+    "static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.d5b07987.chunk.js",
+    "static/css/main.f787fcb0.chunk.css",
+    "static/js/main.ad1f5acf.chunk.js"
+  ]
+}
